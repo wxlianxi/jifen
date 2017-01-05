@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\black_to_white_selector.xml",
+        "source": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\color\\black_to_white_selector.xml"
+    },
+    {
+        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\alpha_to_darker_selector.xml",
+        "source": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\color\\alpha_to_darker_selector.xml"
+    },
+    {
+        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\white_to_black_selector.xml",
+        "source": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\bundles\\debug\\res\\color\\white_to_black_selector.xml"
+    }
+]
