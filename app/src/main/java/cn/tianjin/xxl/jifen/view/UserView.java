@@ -38,7 +38,7 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
         super(context, resources);
     }
 
-    public ImageView ivUserViewHead;
+    public ImageView ivUserViewHead1;
     public ImageView ivUserViewStar;
 
     public TextView tvUserViewSex;
