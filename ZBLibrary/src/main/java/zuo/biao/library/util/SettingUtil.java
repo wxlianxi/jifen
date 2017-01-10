@@ -211,7 +211,7 @@ public final class SettingUtil {
 	/**
 	 * TODO 改为你的正式服务器地址
 	 */
-	public static final String URL_SERVER_ADDRESS_NORMAL_HTTP = "http://115.29.251.155/index.php/Home/Index/test";//正式服务器
+	public static final String URL_SERVER_ADDRESS_NORMAL_HTTP = "http://115.29.251.155/index.php/Home/Index/testnews";//正式服务器
 	/**
 	 * TODO 改为你的正式服务器地址
 	 */

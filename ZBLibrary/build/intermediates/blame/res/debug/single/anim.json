@@ -40,12 +40,12 @@
         "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
-    },
-    {
         "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_push_out_keyboard.xml",
         "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\anim\\bottom_push_out_keyboard.xml"
+    },
+    {
+        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
     },
     {
         "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\anim\\left_push_out.xml",

@@ -208,12 +208,12 @@
         "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\drawable\\menu_manage_manager_bg.xml"
     },
     {
-        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_blue.xml",
-        "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\drawable\\circle_blue.xml"
-    },
-    {
         "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_right_but_bg.xml",
         "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\drawable\\dialog_right_but_bg.xml"
+    },
+    {
+        "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_blue.xml",
+        "source": "D:\\project\\android\\jifen\\ZBLibrary\\src\\main\\res\\drawable\\circle_blue.xml"
     },
     {
         "merged": "D:\\project\\android\\jifen\\ZBLibrary\\build\\intermediates\\res\\merged\\debug\\drawable\\alpha_to_darker_alpha.xml",
