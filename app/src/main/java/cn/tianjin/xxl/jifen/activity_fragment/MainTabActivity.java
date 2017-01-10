@@ -95,7 +95,7 @@ public class MainTabActivity extends BaseBottomTabActivity implements OnBottomDr
         }
     };
 
-    private static final String[] TAB_NAMES = {"主页", "消息", "发现1", "设置"};
+    private static final String[] TAB_NAMES = {"主页1", "消息", "发现1", "设置"};
     @Override
     protected void selectTab(int position) {
         //导致切换时闪屏，建议去掉BottomTabActivity中的topbar，在fragment中显示topbar

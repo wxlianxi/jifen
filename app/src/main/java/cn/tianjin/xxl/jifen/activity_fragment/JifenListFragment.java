@@ -48,7 +48,7 @@ public class JifenListFragment extends BaseListFragment<Entry<String, String>, L
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState, R.layout.jifen_list_fragment);
+        super.onCreateView(inflater, container, savedInstanceState, R.layout.jifen_news_list_fragment);
 
         //功能归类分区方法，必须调用<<<<<<<<<<
         initView();
@@ -187,7 +187,7 @@ public class JifenListFragment extends BaseListFragment<Entry<String, String>, L
 
     //内部类,尽量少用>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    @Override
+    /*@Override
     public void onStart() {
         super.onStart();
         banner = (Banner) getView().findViewById(R.id.banner);
@@ -218,6 +218,6 @@ public class JifenListFragment extends BaseListFragment<Entry<String, String>, L
         banner.setIndicatorGravity(BannerConfig.CENTER);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
-    }
+    }*/
 
 }

@@ -140,4 +140,21 @@ public class HttpRequest {
 
     //示例代码>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    /**获取新闻列表
+     * @param range
+     * @param pageNum
+     * @param requestCode
+     * @param listener
+     */
+    public static void getNewsList(int range, int pageNum, final int requestCode, final HttpManager.OnHttpResponseListener listener) {
+        List<Parameter> paramList = new ArrayList<Parameter>();
+        addExistParameter(paramList, KEY_CURRENT_USER_ID, JifenApplication.getInstance().getCurrentUserId());
+        addExistParameter(paramList, KEY_RANGE, range);
+        addExistParameter(paramList, KEY_PAGE_NUM, pageNum);
+
+        //HttpManager.getInstance().get(paramList, URL_BASE + "user/list", requestCode, listener);
+        HttpManager.getInstance().get(paramList, URL_BASE , requestCode, listener);
+    }
+
+
 }

@@ -1,7 +1,6 @@
 package cn.tianjin.xxl.jifen.activity_fragment;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +19,8 @@ import java.util.List;
 
 import cn.tianjin.xxl.jifen.R;
 import cn.tianjin.xxl.jifen.adapter.GlideImageLoader;
-import cn.tianjin.xxl.jifen.adapter.UserAdapter;
-import cn.tianjin.xxl.jifen.model.User;
+import cn.tianjin.xxl.jifen.adapter.NewsAdapter;
+import cn.tianjin.xxl.jifen.model.News;
 import cn.tianjin.xxl.jifen.util.HttpRequest;
 import zuo.biao.library.base.BaseHttpListFragment;
 import zuo.biao.library.base.BaseModel;
@@ -35,8 +34,8 @@ import zuo.biao.library.util.Json;
  * @must 查看 .HttpManager 中的@must和@warn
  *       查看 .SettingUtil 中的@must和@warn
  */
-public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//CacheAdapter<User, UserView, UserAdapter>>//
-        implements AdapterView.OnItemClickListener, CacheCallBack<User> {
+public class UserListFragment extends BaseHttpListFragment<News, NewsAdapter>//CacheAdapter<User, UserView, UserAdapter>>//
+        implements AdapterView.OnItemClickListener, CacheCallBack<News> {
     //	private static final String TAG = "UserListFragment";
 
     //与Activity通信<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -104,12 +103,12 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
     }
 
     @Override
-    public void setList(final List<User> list) {
-        setList(new AdapterCallBack<UserAdapter>() {
+    public void setList(final List<News> list) {
+        setList(new AdapterCallBack<NewsAdapter>() {
 
             @Override
-            public UserAdapter createAdapter() {
-                return new UserAdapter(context);
+            public NewsAdapter createAdapter() {
+                return new NewsAdapter(context);
             }
 
             @Override
@@ -123,7 +122,7 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
         //
         //			@Override
         //			public void onResult(final List<String> result) {
-        //				setList(new AdapterCallBack<CacheAdapter<User, UserView, UserAdapter>>() {
+        //				setList(new AdapterCallBack<CacheAdapter<User, NewsView, UserAdapter>>() {
         //
         //					@Override
         //					public CacheAdapter<User, UserView, UserAdapter> createAdapter() {
@@ -166,7 +165,7 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
     @Override
     public void getListAsync(final int pageNum) {
         //实际使用时用这个，需要配置服务器地址		HttpRequest.getUserList(range, pageNum, 0, this);
-        HttpRequest.getUserList(range, pageNum, 0, this);
+        HttpRequest.getNewsList(range, pageNum, 0, this);
         //仅测试用<<<<<<<<<<<
         /*new Handler().postDelayed(new Runnable() {
 
@@ -180,20 +179,20 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
     }
 
     @Override
-    public List<User> parseArray(String json) {
-        return Json.parseArray(json, User.class);
+    public List<News> parseArray(String json) {
+        return Json.parseArray(json, News.class);
     }
 
     @Override
-    public Class<User> getCacheClass() {
-        return User.class;
+    public Class<News> getCacheClass() {
+        return News.class;
     }
     @Override
     public String getCacheGroup() {
         return "range=" + range;
     }
     @Override
-    public String getCacheId(User data) {
+    public String getCacheId(News data) {
         return data == null ? null : "" + data.getId();
     }
 
@@ -228,9 +227,9 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
             return;
         }
 
-        User user = list.get(position);//adapter.getItem(position);
-        if (BaseModel.isCorrect(user)) {//相当于 user != null && user.getId() > 0
-            toActivity(UserActivity.createIntent(context, user.getId()));
+        News news = list.get(position);//adapter.getItem(position);
+        if (BaseModel.isCorrect(news)) {//相当于 user != null && user.getId() > 0
+            toActivity(UserActivity.createIntent(context, news.getId()));
         }
     }
 
@@ -260,7 +259,7 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
     //内部类,尽量少用>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-    @Override
+    /*@Override
     public void onStart() {
         super.onStart();
         banner = (Banner) getView().findViewById(R.id.banner);
@@ -292,7 +291,7 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter>//C
         banner.setIndicatorGravity(BannerConfig.CENTER);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
-    }
+    }*/
 
     private View headerView(){
         View headerView=LayoutInflater.from(context).inflate(R.layout.lv_header, null);
